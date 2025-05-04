@@ -6,10 +6,13 @@ SELECT
 
   -- Age group
   CASE 
+	WHEN age BETWEEN 0 AND 5 THEN '0-5'
+    WHEN age BETWEEN 6 AND 11 THEN '6-11'
+    WHEN age BETWEEN 12 AND 17 THEN '12-17'
     WHEN age BETWEEN 18 AND 29 THEN '18–29'
     WHEN age BETWEEN 30 AND 44 THEN '30–44'
-    WHEN age BETWEEN 45 AND 59 THEN '45–59'
-    ELSE '60+'
+    WHEN age BETWEEN 45 AND 64 THEN '45–64'
+    ELSE '65+'
   END AS age_group,
 
   -- BMI category
